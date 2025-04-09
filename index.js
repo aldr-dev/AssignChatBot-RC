@@ -1,4 +1,4 @@
-// AssignChatBot-RC v1.1
+// AssignChatBot-RC v1.2
 // By @aldrrider - Telegram
 // Данный скрипт разработан для автоматизации сбора заявок из общей очереди чата, программы RocketChat.
 
@@ -26,13 +26,17 @@ const handlerClick = () => {
 
     const handlerClickNewChat = (i) => {
         elementsLink[i].click();
-        if (buttonRoom) {
-            buttonRoom.click();
-        }
+        setTimeout(() => {
+            if (buttonRoom) {
+                buttonRoom.click();
+            }
+        }, 300);
      }
 
     for (let i = 0; i < elementsLink.length; i++) {
-        handlerClickNewChat(i);
+        setTimeout(() => {
+          handlerClickNewChat(i);
+        }, 300);
     }
 
     isProcessing = false;
