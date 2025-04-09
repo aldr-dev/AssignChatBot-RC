@@ -1,4 +1,4 @@
-// AssignChatBot-RC v1.2
+// AssignChatBot-RC v1.3
 // By @aldrrider - Telegram
 // Данный скрипт разработан для автоматизации сбора заявок из общей очереди чата, программы RocketChat.
 
