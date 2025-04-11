@@ -7,7 +7,7 @@ let isProcessing = false;
 const GetElements = () => {
     const containerRoom = document.querySelector('.rooms-list__list.inquiries');
     const elementsRoom =  containerRoom.querySelectorAll('.sidebar-item');
-    const elementsLink =  document.querySelectorAll('.sidebar-item__link');
+    const elementsLink =  containerRoom.querySelectorAll('.sidebar-item__link');
     const buttonRoom =  document.querySelector('.rc-message-box__take-it-button');
 
     return { containerRoom, elementsRoom, elementsLink, buttonRoom }
@@ -15,9 +15,10 @@ const GetElements = () => {
 
 const handlerClick = () => {
     if (isProcessing) return;
+
     isProcessing = true;
 
-    const { containerRoom, elementsRoom, elementsLink, buttonRoom} = GetElements();
+    const { containerRoom, elementsRoom, elementsLink, buttonRoom, x} = GetElements();
 
     if (!containerRoom || !elementsRoom || elementsLink.length === 0) {
         isProcessing = false;
