@@ -18,7 +18,7 @@ const handlerClick = () => {
 
     isProcessing = true;
 
-    const { containerRoom, elementsRoom, elementsLink, buttonRoom, x} = GetElements();
+    const { containerRoom, elementsRoom, elementsLink, buttonRoom } = GetElements();
 
     if (!containerRoom || !elementsRoom || elementsLink.length === 0) {
         isProcessing = false;
